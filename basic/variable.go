@@ -33,6 +33,10 @@ func main() {
 	f := find(students)
 	isExist := f("monsky")
 	fmt.Println(isExist)
+
+	// fmt.Println(models.User)
+
+	coba(10, test())
 }
 
 // return multiple value
@@ -72,6 +76,14 @@ func timeTo20(i int) int {
 func coba(num int, cb func(int) int) {
 	total := cb(num)
 	fmt.Println("total callback", total)
+}
+
+// closure
+func test() func(int) int {
+	return func(i int) int {
+		fmt.Println(i)
+		return i + 20
+	}
 }
 
 // using callback
