@@ -18,8 +18,8 @@ package models
 // }
 
 type User struct {
-	Id    int
-	Email string
+	Id    *int   `json:"id, omitempty"`
+	Email string `json:"email"`
 }
 
 type UserWithAddress struct {
@@ -35,6 +35,5 @@ var User2 = UserWithAddress{
 }
 
 var User3 = User{
-	Id:    20,
-	Email: "dev@k3monspace.com",
+	Email: "",
 }

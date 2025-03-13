@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"nbfriends/basic/models"
 )
@@ -39,7 +40,18 @@ func main() {
 	// var umur models.Angka = 25
 	// fmt.Println("umur adalah ", umur)
 
-	fmt.Printf("%+v\n", models.User2)
+	// fmt.Printf("%+v\n", models.User2)
+
+	// json
+	dataByte, _ := json.Marshal(models.User3)
+	fmt.Printf("%+v\n", string(dataByte))
+
+	user := models.User3
+	fmt.Println(user)
+	user.Email = "monsky@k3monspace.com"
+	fmt.Println(user)
+
+	models.RunPointer()
 
 	coba(10, test())
 }
