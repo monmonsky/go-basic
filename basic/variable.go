@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"nbfriends/basic/models"
 )
 
 // bisa di luar function
@@ -35,6 +36,10 @@ func main() {
 	fmt.Println(isExist)
 
 	// fmt.Println(models.User)
+	// var umur models.Angka = 25
+	// fmt.Println("umur adalah ", umur)
+
+	fmt.Printf("%+v\n", models.User2)
 
 	coba(10, test())
 }
