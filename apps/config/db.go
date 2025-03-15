@@ -7,6 +7,9 @@ import (
 	_ "github.com/lib/pq"
 )
 
+// ConnectDB returns a new database session connected to the default
+// PostgreSQL server. It returns an error if the connection could not be
+// established.
 func ConnectDB() (*sql.DB, error) {
 	dsn := fmt.Sprintf(
 		"host=%s port=%s user=%s password=%s dbname=%s sslmode=disable",
@@ -27,5 +30,5 @@ func ConnectDB() (*sql.DB, error) {
 	}
 
 	return db, nil
-		
+
 }
